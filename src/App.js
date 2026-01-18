@@ -84,10 +84,10 @@ useEffect(() => {
       <header className="header">
         <div className="logo">Elite</div>
         <nav>
-         <a href="/">Kontakt</a>
-         <a href="/">Service</a>
-         <a href="/">Über uns</a>
-         <a href="/">Impressum</a>
+         <a href="#kontakt">Kontakt</a>
+         <a href="#service">Service</a>
+         <a href="#ueber">Über uns</a>
+         <a href="#impressum">Impressum</a>
           <button className="btn small">Sign Up</button>
         </nav>
       </header>
