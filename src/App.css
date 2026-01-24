@@ -1388,3 +1388,305 @@ body::before {
 .brand-mark {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+
+.services-section {
+  padding: 10px 8% 90px;
+}
+
+.services-head {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: 0.7s ease;
+}
+
+.services-title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.services-sub {
+  margin-top: 14px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+/* responsive */
+@media (max-width: 1050px) {
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .services-title { font-size: 34px; }
+}
+
+.service-card {
+  position: relative;
+  padding: 22px 22px 18px;
+  border-radius: 26px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, rgba(106,92,255,0.22), rgba(165,139,255,0.14));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.38),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: 0.65s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(170,150,255,0.28), transparent 55%);
+  opacity: 0.9;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 40px 95px rgba(0,0,0,0.55),
+    0 0 30px rgba(170,150,255,0.28);
+}
+
+.service-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 14px;
+  color: #fff;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(170,150,255,0.40);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+}
+
+.service-meta h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.service-meta p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.4;
+}
+
+.service-price {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+
+  background: rgba(0,0,0,0.22);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+}
+
+.service-price b {
+  font-size: 20px;
+  color: #fff;
+}
+
+.service-cta {
+  position: relative;
+  z-index: 1;
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(170,150,255,0.45);
+  background: rgba(255,255,255,0.06);
+  transition: 0.25s ease;
+}
+
+.service-cta:hover {
+  background: rgba(170,150,255,0.18);
+  transform: translateY(-1px);
+}
+
+.services-foot {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.services-note {
+  color: rgba(255,255,255,0.72);
+  font-size: 13px;
+  max-width: 780px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+}
+
+.services-maincta {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.services-login {
+  display: block;
+  margin-top: 14px;
+  color: rgba(255,255,255,0.78);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.services-login:hover {
+  color: #fff;
+}
+
+/* Show animation (reuses your existing "show" class) */
+.show.services-head,
+.show.service-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.platform-icon.instagram { color: #E1306C; }
+.platform-icon.tiktok { color: #ffffff; }
+.platform-icon.youtube { color: #ff0000; }
+
+/* ===== Premium FAQ-Style Cards ===== */
+.premium-card{
+  position: relative;
+  border-radius: 22px;
+  padding: 22px 22px;
+  background: rgba(255,255,255,0.06);              /* glass */
+  border: 1px solid rgba(255,255,255,0.26);        /* white outline */
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.08) inset;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+
+  transform: translateY(0) scale(1);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+/* Glowing border layer */
+.premium-card::before{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: radial-gradient(circle at 30% 20%,
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.08) 40%,
+    rgba(255,255,255,0.00) 70%
+  );
+  opacity: 0.55;
+  filter: blur(18px);
+  z-index: 0;
+  pointer-events: none;
+  animation: premiumPulse 3.2s ease-in-out infinite;
+}
+
+/* Shine / Glint animation (the “krasse” UI effect) */
+.premium-card::after{
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 140%;
+  height: 140%;
+  background: linear-gradient(120deg,
+    transparent 0%,
+    rgba(255,255,255,0.12) 40%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,255,255,0.12) 60%,
+    transparent 100%
+  );
+  transform: rotate(12deg);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep content above pseudo layers */
+.premium-card > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover = lift + stronger white glow */
+.premium-card:hover{
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255,255,255,0.55);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.45),
+    0 0 34px rgba(255,255,255,0.18),
+    0 0 0 1px rgba(255,255,255,0.12) inset;
+}
+
+/* Shine appears on hover */
+.premium-card:hover::after{
+  opacity: 1;
+  animation: premiumShine 1.35s ease forwards;
+}
+
+/* Pulse glow */
+@keyframes premiumPulse{
+  0%,100%{ opacity: 0.45; transform: translateY(0); }
+  50%{ opacity: 0.70; transform: translateY(-4px); }
+}
+
+/* Shine sweep */
+@keyframes premiumShine{
+  0%{ transform: translate(-20%, -20%) rotate(12deg); }
+  100%{ transform: translate(55%, 55%) rotate(12deg); }
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(22px) scale(0.98);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.show{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

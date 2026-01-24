@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import "./App.css";
 import heroMan from "./images/hero-man.png";
 
@@ -44,9 +45,10 @@ function App() {
       { threshold: 0.2 }
     );
 
-    document.querySelectorAll(".order-box, .order-title").forEach((el) => {
-      observer.observe(el);
-    });
+    document.querySelectorAll(".order-box, .order-title, .service-card, .services-head").forEach((el) => {
+  observer.observe(el);
+});
+
 
     return () => observer.disconnect();
   }, []);
@@ -357,6 +359,170 @@ function App() {
   </div>
 </section>
 
+<div className="section-divider">
+  <span>Services</span>
+</div>
+
+<section className="services-section" id="services">
+  <div className="services-head">
+    <h2 className="services-title">Starter Pricing</h2>
+    <p className="services-sub">
+      Transparent prices. Premium delivery. Full details inside the panel.
+    </p>
+  </div>
+
+  <div className="services-grid">
+    <div className="service-card premium-card reveal">
+      <div className="service-top">
+        <FaInstagram className="platform-icon instagram" />
+        <div className="service-meta">
+          <h3>Instagram Followers</h3>
+          <p>Realistic growth for creators & brands</p>
+        </div>
+      </div>
+      <div className="service-price">
+        <span>from</span> <b>€1.50</b> <span>/ 1,000</span>
+      </div>
+      <a
+        className="service-cta"
+        href="https://eliteservicex.com/panel/auth/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View in Panel →
+      </a>
+    </div>
+
+    <div className="service-card premium-card reveal">
+      <div className="service-top">
+        <FaTiktok className="platform-icon tiktok" />
+       <div className="service-meta">
+          <h3>TikTok Followers</h3>
+          <p>Boost credibility & social proof</p>
+        </div>
+      </div>
+      <div className="service-price">
+        <span>from</span> <b>€1.50</b> <span>/ 1,000</span>
+      </div>
+      <a
+        className="service-cta"
+        href="https://eliteservicex.com/panel/auth/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View in Panel →
+      </a>
+    </div>
+
+    <div className="service-card premium-card reveal">
+      <div className="service-top">
+        <FaYoutube className="platform-icon youtube" />
+        <div className="service-meta">
+          <h3>YouTube Views</h3>
+          <p>Improve reach & visibility</p>
+        </div>
+      </div>
+      <div className="service-price">
+        <span>from</span> <b>€0.99</b> <span>/ 1,000</span>
+      </div>
+      <a
+        className="service-cta"
+        href="https://eliteservicex.com/panel/auth/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View in Panel →
+      </a>
+    </div>
+
+    <div className="service-card premium-card reveal">
+      <div className="service-top">
+        <FaInstagram className="platform-icon instagram" />
+        <div className="service-meta">
+          <h3>Instagram Likes</h3>
+          <p>More engagement for posts & reels</p>
+        </div>
+      </div>
+      <div className="service-price">
+        <span>from</span> <b>€0.79</b> <span>/ 1,000</span>
+      </div>
+      <a
+        className="service-cta"
+        href="https://eliteservicex.com/panel/auth/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View in Panel →
+      </a>
+    </div>
+
+    <div className="service-card premium-card reveal">
+      <div className="service-top">
+        <FaTiktok className="platform-icon tiktok" />
+        <div className="service-meta">
+          <h3>TikTok Views</h3>
+          <p>Push your content to more users</p>
+        </div>
+      </div>
+      <div className="service-price">
+        <span>from</span> <b>€0.69</b> <span>/ 10,000</span>
+      </div>
+      <a
+        className="service-cta"
+        href="https://eliteservicex.com/panel/auth/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View in Panel →
+      </a>
+    </div>
+
+    <div className="service-card premium-card reveal">
+      <div className="service-top">
+        <div className="service-icon">API</div>
+        <div className="service-meta">
+          <h3>Reseller Access</h3>
+          <p>Dashboard + bulk orders + API tools</p>
+        </div>
+      </div>
+      <div className="service-price">
+        <span>included</span> <b>Free</b> <span>with account</span>
+      </div>
+      <a
+        className="service-cta"
+        href="https://eliteservicex.com/panel/auth/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Create Account →
+      </a>
+    </div>
+  </div>
+
+  <div className="services-foot">
+    <div className="services-note">
+      Prices shown are starting prices. Full service list & details are available inside the panel.
+    </div>
+
+    <a
+      className="btn primary services-maincta"
+      href="https://eliteservicex.com/panel/auth/signup"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Create Free Account
+    </a>
+
+    <a
+      className="services-login"
+      href="https://eliteservicex.com/panel/auth/login"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    </a>
+  </div>
+</section>
+
 <footer className="site-footer" id="footer">
   <div className="footer-inner">
     {/* Left */}
@@ -411,6 +577,7 @@ function App() {
     </div>
   </div>
 </footer>
+
 
 
     </div>
