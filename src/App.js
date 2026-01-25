@@ -64,30 +64,33 @@ function App() {
   </div>
 </div>
 
-        <nav>
-          <a href="#contact">Contact</a>
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
+        <nav className="nav">
+  <div className="nav-links">
+    <a href="#contact">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+  </div>
 
-          <a
-            href="https://eliteservicex.com/panel/auth/signup"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn small"
-          >
-            Sign Up
-          </a>
+  <div className="nav-actions">
+    <a
+      href="https://eliteservicex.com/panel/auth/signup"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn small"
+    >
+      Sign Up
+    </a>
 
-          <a
-            href="https://eliteservicex.com/panel/auth/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn small"
-            style={{ marginLeft: "10px" }}
-          >
-            Login
-          </a>
-        </nav>
+    <a
+      href="https://eliteservicex.com/panel/auth/login"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn small"
+    >
+      Login
+    </a>
+  </div>
+</nav>
       </header>
 
       <section className="hero">
