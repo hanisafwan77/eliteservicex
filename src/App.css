@@ -1690,3 +1690,164 @@ body::before {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
+@media (max-width: 900px) {
+  /* Allgemein: weniger Padding */
+  .hero,
+  .services-section,
+  .steps-section,
+  .faq-section,
+  footer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  /* HEADER: Logo + Menü untereinander */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .header nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  /* HERO: alles untereinander statt nebeneinander */
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    padding-top: 70px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+    margin-top: 14px;
+  }
+
+  .hero-text .btn.primary {
+    margin-top: 18px;
+  }
+
+  /* Bild / Visual: volle Breite */
+  .hero-visual {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Floating Logos: kleiner + näher ran */
+  .floating {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  /* Hero Cards untereinander */
+  .hero-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* STATS: 2 pro Reihe */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .stat-card {
+    padding: 22px;
+  }
+
+  .stat-card h2 {
+    font-size: 26px;
+  }
+
+  /* Steps: 1 pro Reihe */
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .step-box {
+    padding: 22px;
+  }
+
+  /* Reviews: 1 pro Reihe + besser lesbar */
+  .reviews-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .review-box {
+    min-width: unset;
+  }
+
+  /* FAQ: 1 Spalte statt 2 */
+  .faq-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /* Divider: schmaler */
+  .section-divider {
+    width: 92%;
+    margin: 70px auto 40px;
+  }
+
+  .section-divider span {
+    font-size: 14px;
+    padding: 7px 18px;
+  }
+
+  /* FOOTER: untereinander */
+  .footer-grid,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* EXTRA: sehr kleine Handys */
+@media (max-width: 420px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .step-badge {
+    transform: scale(0.9);
+  }
+}
